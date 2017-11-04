@@ -1,0 +1,124 @@
+.panel-songsList{
+  padding-left: .7143rem;
+}
+.songs-item{
+  width: 100%;
+  height: 4.0714rem;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  display: table;
+}
+.songs-item-name{
+  width: 100%;
+  padding-right: 2.657rem;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: .3571rem;
+  cursor: pointer;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.songs-item-download{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.5rem;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  background: url("images/download.png") no-repeat center center;
+  background-size: 50%;
+}
+/*排行和歌单共用*/
+.panel-img-list li a{
+  display: block;
+  position: relative;
+  margin-left: .7143rem;
+  padding: .7143rem 2.14286rem .7143rem 6.4286rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+.panel-img-left{
+  position: absolute;
+  top: .7143rem;
+  left: 0;
+  width: 5.3751rem;
+  height: 5.3751rem;
+}
+.panel-img-left img{
+  width: 100%;
+}
+.panel-img-content{
+  min-height: 5.3751rem;
+  line-height: 5.3751rem;
+  display: block;
+  font-size: 1.0714rem;
+  color: #333;
+}
+.panel-img-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.14286rem;
+  height: 100%;
+  text-align: center;
+  display: block;
+  background: url('images/arrow_icon.png') no-repeat center center;
+  background-size: 30%;
+}
+/*歌单信息页与歌手信息页*/
+.img-box{
+  height: 12.5rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.img-box>img{
+  width: 100%;
+  margin-top: -75px;
+}
+.intro-box{
+    width: 100%;
+    height: 2.25rem;
+    line-height: 1.8;
+    padding: .5357rem 2.67857rem .5357rem .8929rem;
+    box-shadow: 0 0.1785rem 0.1785rem 0 #f4f4f4;
+    position: relative;
+    overflow: hidden;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.intro-box.auto{
+  height: auto;
+}
+.intro-icon-box {
+    width: 2.1429rem;
+    height: 2rem;
+    line-height: 2.1429rem;
+    position: absolute;
+    top: .25rem;
+    right: .1786rem;
+    text-align: center;
+    cursor: pointer;
+}
+.intro-icon {
+    background: url('images/close_icon.png') no-repeat;
+    background-size: 100%;
+}
+.intro-icon.open{
+  background: url('images/open_icon.png') no-repeat;
+  background-size: 100%;
+}
+.intro-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+/*底部共用样式*/
+.bd-bottom{
+  padding-bottom: 4.2143rem;
+}
+/*隐藏*/
+.hide{
+  display: none;
+}
