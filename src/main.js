@@ -33,6 +33,12 @@ router.beforeEach((to, from, next) => {
   } else {
     store.state.hideBol = false
   }
+  if (to.path === '/search') {
+    console.log(1)
+    store.state.bgcolor = 'white'
+  } else {
+    store.state.bgcolor = '-webkit-linear-gradient(top,rgba(0,0,0,.6),transparent)'
+  }
   next()
 })
 

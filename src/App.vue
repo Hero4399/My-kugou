@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     
-    <top-fixed :headTitle="titleName"></top-fixed>
-    
-      <!--<router-view :class="{'hide': showDetailBol}"/>
-    <bottom-fixed :class="{'hide': showDetailBol}"></bottom-fixed>
-    <show-detail :class="{'hide': !showDetailBol}"></show-detail>-->
+    <top-fixed :headTitle="titleName" :bgcolor="bgcolor"></top-fixed>
+    <!-- <keep-alive> -->
+
      <router-view/>
+    <!-- </keep-alive> -->
     <bottom-fixed></bottom-fixed>
   </div>
 </template>
@@ -24,6 +23,9 @@ export default {
   computed: {
     titleName () {
       return this.$store.state.headName
+    },
+    bgcolor () {
+      return this.$store.state.bgcolor
     },
     showDetailBol () {
       return this.$store.state.showDetailBol

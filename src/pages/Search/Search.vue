@@ -1,5 +1,5 @@
 <template>
-  <div class="search">
+  <div class="search" :class="{'bd-bottom': showPlayBol}">
     <!--搜索框-->
     <div class="search-box">
       <div class="search-form-box">
@@ -80,7 +80,7 @@ export default {
       })
       this.$http.get('/aproxy/api/v3/search/hot?format=json&plat=0&count=30')
         .then(res => {
-          console.log(res.data)
+          // console.log(res.data)
           this.searchList = res.data.data.info
         })
         .then(() => {

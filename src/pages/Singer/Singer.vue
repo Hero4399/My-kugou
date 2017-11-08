@@ -1,5 +1,5 @@
 <template>
-  <div class="singer">
+  <div class="singer" :class="{'bd-bottom': showPlayBol}">
   <ul class="singer-class-list">
     <li>
       <router-link :to="'/singer/list/' + list[0].classid">
@@ -86,16 +86,9 @@ export default {
     }
   },
   computed: {
-    // list () {
-    //   return this.$http.get('/proxy/singer/class&json=true')
-    //   .then(res => {
-    //     let list = res.data.list
-    //     if (list.length > 0) {
-    //       console.log(list)
-    //       return list
-    //     }
-    //   })
-    // }
+    showPlayBol () {
+      return this.$store.state.showPlayBol
+    }
   }
 }
 </script>

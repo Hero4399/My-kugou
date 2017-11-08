@@ -34,6 +34,8 @@ export default {
   isNav: true,
   // 头部名字
   headName: '',
+  // 背景颜色
+  bgcolor: '-webkit-linear-gradient(top,rgba(0,0,0,.6),transparent)',
   // 显示歌词页
   showDetailBol: false
 }

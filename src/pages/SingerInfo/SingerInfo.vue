@@ -34,7 +34,8 @@ export default {
       singer: {
         imgurl: ''
       },
-      isOpen: false
+      isOpen: false,
+      headName: ''
     }
   },
   methods: {
@@ -47,6 +48,8 @@ export default {
         .then(res => {
           this.songList = res.data.songs.list
           this.singer = res.data.info
+          this.headName = res.data.info.singername
+          this.$store.dispatch('getHeadName', this.headName)
           if (this.songList.length > 0) {
             this.$store.dispatch('saveSongList', this.songList)
           }

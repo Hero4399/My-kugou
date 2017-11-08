@@ -6,7 +6,7 @@
       <div class="download-app">
         <span>下载酷狗</span>
       </div>
-      <a class="btn-search" href="/search"></a>
+      <router-link class="btn-search" to="/search"></router-link>
     </div>
     <!--导航页,仅四个页面共有-->
     <div class="top-nav" v-if="isNav">
@@ -28,16 +28,19 @@
     
     </div>
     <!--详情页-->
-    <div v-else class="top-goback" :style="{'background': bgcolor}">
+    <div v-else class="top-goback" :class="{'top-color': getBgColor==='white' }" :style="{'background': bgcolor}">
       <p class="page-title">{{headTitle}}</p>
       <div class="goback">
-        <i @click="goback"></i>
+        <i @click="goback" :class="{'grayPic': getBgColor==='white' }"></i>
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
+  created () {
+    console.log(this.getBgColor)
+  },
   data () {
     return {
       navIndex: 0
@@ -68,6 +71,9 @@ export default {
   computed: {
     isNav () {
       return this.$store.state.isNav
+    },
+    getBgColor () {
+      return this.$store.state.bgcolor
     }
   }
 }
@@ -161,6 +167,10 @@ export default {
   color: #fff;
   box-sizing: border-box;
 }
+.top-color{
+  color: #000;
+  box-shadow: 0 0.1785rem 0.1785rem 0 #f4f4f4;
+}
 .page-title {
   height: 3rem;
   line-height: 3rem;
@@ -181,6 +191,10 @@ export default {
   margin-top: .687265rem;
   display: inline-block;
   background: url('images/goback_1.png') no-repeat;
+  background-size: 100%;
+}
+.goback>i.grayPic{
+  background: url('images/goback.png') no-repeat;
   background-size: 100%;
 }
 /*.top-nav li.cur a{
