@@ -2,10 +2,10 @@
   <div id="app">
     
     <top-fixed :headTitle="titleName" :bgcolor="bgcolor"></top-fixed>
-    <!-- <keep-alive> -->
+    <keep-alive>
 
      <router-view/>
-    <!-- </keep-alive> -->
+    </keep-alive>
     <bottom-fixed></bottom-fixed>
   </div>
 </template>

@@ -19,7 +19,7 @@
 <script>
 import { Indicator } from 'mint-ui'
 export default {
-  created () {
+  activated () {
     this.id = this.$route.params.id
     this.getSingerLists()
     console.log(this.id)
