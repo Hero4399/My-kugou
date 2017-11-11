@@ -8,7 +8,9 @@
  
  ### 项目截图预览
  
- 
-
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![image](https://github.com/Hero4399/My-Kugou/raw/master/pic/1.png)
+![image](https://github.com/Hero4399/My-Kugou/raw/master/pic/2.png)
+![image](https://github.com/Hero4399/My-Kugou/raw/master/pic/3.png)
+![image](https://github.com/Hero4399/My-Kugou/raw/master/pic/4.png)
+![image](https://github.com/Hero4399/My-Kugou/raw/master/pic/5.png)
+![image](https://github.com/Hero4399/My-Kugou/raw/master/pic/6.png)
