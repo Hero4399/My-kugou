@@ -44,7 +44,7 @@
 <script>
 import { Indicator, MessageBox } from 'mint-ui'
 export default {
-  created () {
+  activated () {
     this.getInfo()
     this.$store.dispatch('getHeadName', this.headName)
     // console.log(this.keyword)

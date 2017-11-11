@@ -23,7 +23,7 @@
 <script>
 import { Indicator, MessageBox } from 'mint-ui'
 export default {
-  created () {
+  activated () {
     this.id = this.$route.params.id
     this.getSongLists()
     console.log(this.id)
