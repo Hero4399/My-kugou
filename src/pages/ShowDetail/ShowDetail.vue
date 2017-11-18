@@ -12,8 +12,13 @@
       <div class="panel-play-lrc-box">
         <div class="panel-play-lrc" :style="{'marginTop': lrcoffset + 'px'}">
           <p v-for="(item, index) in lrc" :key="index"
-          :class="{'cur': (item.substr(1,2) * 60 + parseInt(item.substr(4,5))) >= parseInt(currentTime)}">
+          :class="{'cur': (item.substr(1,2) * 60 + Math.ceil(item.substr(4,5))) > parseInt(currentTime) || (parseInt(currentTime) > (item.substr(1,2) * 60 + parseInt(item.substr(4,5))) && parseInt(currentTime) < (index < lrc.length - 1 ? lrc[index + 1].substr(1, 2) * 60 + parseInt(lrc[index + 1].substr(4, 5)) : audioInfo.songLength))}">
           {{item.split(']')[1]}}</p>
+          <!-- <p v-for="(item, index) in lrc" :key="index"
+          :class="{'cur':lrcActive(item, index)}">
+          {{item}}</p> -->
+          <!-- item.split(']')[1] -->
+
         </div>
       </div>
       <!--显示进度条-->
@@ -100,6 +105,27 @@ export default {
         // console.log(nowTime, this.currentTime)
       }
     }
+    // 歌词是会否被激活
+    // lrcActive (item, index) {
+    //   // console.log(item)
+
+    //   if (index < this.lrc.length - 1) {
+    //     let lrcTime1 = item.substr(1, 2) * 60 + Math.ceil(item.substr(4, 5))
+    //     let lrcTime2 = this.lrc[index + 1].substr(1, 2) * 60 + Math.ceil(this.lrc[index + 1].substr(4, 5))
+    //     if (lrcTime1 > parseInt(this.currentTime) || (parseInt(this.currentTime) > lrcTime1 && parseInt(this.currentTime) < lrcTime2)) {
+    //       return true
+    //     }
+    //     // if (parseInt(this.currentTime) > lrcTime1 && parseInt(this.currentTime) < lrcTime2) {
+    //     //   return true
+    //     // }
+    //   } else {
+    //     // return true
+    //   }
+    //   //  else {
+    //   //   lrcTime2 = this.audioInfo.songLength
+    //   // }
+    // }
+
   },
   computed: {
     // 获取音乐信息
@@ -144,7 +170,6 @@ export default {
     },
     currentTime () {
       let currentTime = this.audioInfo.currentLength
-      // console.log(currentTime)
       return currentTime
     },
     isPlay () {
