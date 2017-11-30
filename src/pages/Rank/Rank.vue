@@ -35,7 +35,7 @@ export default {
       this.$http.get('/proxy/rank/list&json=true')
         .then(res => {
           this.rankLists = res.data.rank.list
-          // console.log(this.rankLists)
+          console.log(this.rankLists)
         })
         .then(() => {
           Indicator.close()

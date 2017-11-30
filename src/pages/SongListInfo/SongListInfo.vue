@@ -26,7 +26,7 @@ export default {
   activated () {
     this.id = this.$route.params.id
     this.getSongLists()
-    console.log(this.id)
+    // console.log(this.id)
   },
   data () {
     return {

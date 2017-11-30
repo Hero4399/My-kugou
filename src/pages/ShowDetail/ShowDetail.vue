@@ -41,10 +41,12 @@
         <i class="btn-next" @click="nextMusic"></i>
       </div>
       <!--下载这首歌-->
-      <div class="download-box" @click="downloadMusic">
+      <!-- <div class="download-box" @click="downloadMusic">
         <i></i>
-        下载这首歌
-      </div>
+        <a :href="audioInfo.audioSrc" download="music">下载这首歌</a>
+      </div> -->
+      <a :href="audioInfo.audioSrc" download="music" class="download-box">
+        <i></i>下载这首歌</a>
     </div>
 
   </div>
@@ -431,6 +433,7 @@ export default {
     background: #259ef7;
     font-size: 1rem;
     border-radius: 5px;
+    display: block;
 }
 .download-box i {
     width: 1.6rem;

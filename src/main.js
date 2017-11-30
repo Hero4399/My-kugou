@@ -11,7 +11,7 @@ import '@/common/styles/index.css'
 
 // 引入mint-ui
 import { Swipe, SwipeItem } from 'mint-ui'
-// import 'mint-ui/lib/style.css'
+import 'mint-ui/lib/style.css'
 // 引入axios
 import axios from 'axios'
 Vue.prototype.$http = axios

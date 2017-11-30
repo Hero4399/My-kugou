@@ -3,8 +3,7 @@
     
     <top-fixed :headTitle="titleName" :bgcolor="bgcolor"></top-fixed>
     <keep-alive>
-
-     <router-view/>
+     <router-view></router-view>
     </keep-alive>
     <bottom-fixed></bottom-fixed>
   </div>

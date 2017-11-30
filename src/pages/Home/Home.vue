@@ -44,7 +44,7 @@ export default {
         text: 'Loading...',
         spinnerType: 'triple-bounce'
       })
-      this.$http.get('/proxy/?json=true')
+      this.$http.get(process.env.API_HOST + '?json=true')
         .then(res => {
           this.banner = res.data.banner
           this.songsList = res.data.data
