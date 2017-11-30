@@ -4,7 +4,7 @@
  clone到本地然后安装依赖 npm install即可运行
  
  ## 使用技术栈
- vueX + vue-router + axios + mint-ui + es6
+ vuex + vue-router + axios + mint-ui + es6
  
  ### 项目截图预览
  
